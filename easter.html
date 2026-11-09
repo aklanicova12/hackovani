@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velikonoce – Bavlaková</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐣</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="easter">
+
+  <div class="ambient-bubble bubble-1"></div>
+  <div class="ambient-bubble bubble-2"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" id="header-logo">
+        Bavlaková<span class="logo-dot"></span>
+      </a>
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html#svety" class="nav-link">Světy</a></li>
+          <li><a href="index.html#filozofie" class="nav-link">Příběh</a></li>
+          <li><a href="#panacci" class="nav-link">Panáčci</a></li>
+          <li><a href="#klubicko" class="nav-link">Koupit klubíčko</a></li>
+          <li><a href="#kontakt" class="nav-link">Kontakt & Vzkazy</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Otevřít menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="worlds-section section-spacing" style="padding-bottom: 2rem; padding-top: 10rem;">
+      <div class="container text-center">
+        <span class="world-icon" style="font-size: 3.5rem; display:block; margin-bottom:1rem;">🐣</span>
+        <h1 style="font-family: var(--font-heading); margin-bottom: 1rem;">Velikonoce</h1>
+        <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 600px; margin: 0 auto;">Jarní zajíčci a velikonoční nálada.</p>
+        <a href="index.html#svety" class="btn btn-secondary" style="margin-top: 2rem;">← Zpět do všech světů</a>
+      </div>
+    </section>
+
+    <section class="products-section section-spacing" id="panacci" style="padding-top: 2rem;">
+      <div class="container">
+        <div class="products-header text-center">
+          <h2 id="products-heading">Osobnosti tohoto světa</h2>
+        </div>
+        <div class="products-grid" id="products-grid"></div>
+      </div>
+    </section>
+
+    <section class="products-section section-spacing" style="background: var(--bg-soft-rose); margin-top: 2rem; border-top: 1px solid rgba(232, 213, 213, 0.5);">
+      <div class="container">
+        <div class="products-header text-center">
+          <h2 class="font-heading">Doporučujeme k objevování</h2>
+          <p>Další kouzelné osobnosti z jiných světů, které by se vám mohly líbit.</p>
+        </div>
+        <div class="products-grid" id="recommended-grid"></div>
+      </div>
+    </section>
+
+<!-- 6. SEKCE: "KUP MI KLUBÍČKO" (Mikropodpora tvorby) -->
+    <section class="donation-section section-spacing" id="klubicko">
+      <div class="container">
+        <div class="donation-grid">
+          <div class="donation-image-card">
+            <img 
+              src="images/story/klubicka.png" 
+              alt="Klubíčka pro podpoření tvorby" 
+              class="donation-img"
+              id="donation-img"
+              onerror="this.onerror=null; this.src='images/klubicka.png'"
+            >
+          </div>
+
+          <div class="donation-content">
+            <h2>Kup mi klubíčko 🧶</h2>
+            <p>
+              Chcete podpořit vznik dalších pohádkových postaviček? Můžete mi symbolicky koupit klubíčko vlny. Každý příspěvek mi pomáhá pořizovat ty nejkvalitnější přírodní příze a věnovat se tvorbě.
+            </p>
+
+            <div class="donation-options">
+              <div class="donation-tile selected" data-amount="50" id="tile-50">
+                <div class="donation-price">50 Kč</div>
+                <div class="donation-title">Bavlněné klubíčko</div>
+              </div>
+
+              <div class="donation-tile" data-amount="100" id="tile-100">
+                <div class="donation-price">100 Kč</div>
+                <div class="donation-title">Třpytivé klubíčko</div>
+              </div>
+
+              <div class="donation-tile" data-amount="200" id="tile-200">
+                <div class="donation-price">200 Kč</div>
+                <div class="donation-title">Zlaté předení</div>
+              </div>
+            </div>
+
+            <button class="btn btn-gold" id="btn-donate">
+              <span>Darovat klubíčko přes QR platbu</span>
+              <span>✨</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. KONTAKT A KNIHA VZKAZŮ -->
+    <section class="contact-section section-spacing" id="kontakt">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- ADOPTION / CONTACT FORM -->
+          <div class="glass-form-card">
+            <h2>Adoptovat nebo se zeptat</h2>
+            <p>Máte zájem o volnou postavičku nebo se chcete na cokoliv zeptat? Napište mi zprávu:</p>
+
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Vaše Jméno *</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="např. Anna Nováková" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">E-mail *</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="vas@email.cz" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-character" class="form-label">Výběr postavičky</label>
+                <select id="contact-character" class="form-select">
+                  <option value="obecny">-- Obecný dotaz / Jiné přání --</option>
+                  <option value="Vánoční věneček">Vánoční věneček (Volný originál)</option>
+                  <option value="Pudinková holčička">Pudinková holčička (Volný originál)</option>
+                  <option value="Malý sobík">Malý sobík (Volný originál)</option>
+                  <option value="Sněhuláček">Sněhuláček (Volný originál)</option>
+                  <option value="Zaječí věneček">Zaječí věneček (Volný originál)</option>
+                  <option value="Bílý zajíček">Bílý zajíček (Volný originál)</option>
+                  <option value="Jahůdkový skřítek">Jahůdkový skřítek (Volný originál)</option>
+                  <option value="Skřítek s konvičkou">Skřítek s konvičkou (Volný originál)</option>
+                  <option value="Malé prasátko">Malé prasátko (Volný originál)</option>
+                  <option value="Prasátko baletka">Prasátko baletka (Volný originál)</option>
+                  <option value="Princezna Mulan">Princezna Mulan (Volný originál)</option>
+                  <option value="Lesní duch">Lesní duch (Volný originál)</option>
+                  <option value="Konvalinková víla">Konvalinková víla (Volný originál)</option>
+                  <option value="Růžový ptáček">Růžový ptáček (Volný originál)</option>
+                  <option value="Včelí královnička">Včelí královnička (Volný originál)</option>
+                  <option value="Kopretinový skřítek">Kopretinový skřítek (Volný originál)</option>
+                  <option value="Maličký kopretinový skřítek">Maličký kopretinový skřítek (Volný originál)</option>
+                  <option value="Malá žabka">Malá žabka (Volný originál)</option>
+                  <option value="Mrkvičkový skřítek">Mrkvičkový skřítek (Volný originál)</option>
+                  <option value="Žabák s muchomůrkou">Žabák s muchomůrkou (Volný originál)</option>
+                  <option value="Žabák u velké muchomůrky">Žabák u velké muchomůrky (Volný originál)</option>
+                  <option value="Skřítek růžového kvítku">Skřítek růžového kvítku (Volný originál)</option>
+                  <option value="Růžová muchomůrka">Růžová muchomůrka (Volný originál)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Vaše zpráva *</label>
+                <textarea id="contact-message" class="form-textarea" rows="4" placeholder="Napište mi pár slov..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="btn-submit-contact" style="width: 100%;">
+                Odeslat zprávu
+              </button>
+            </form>
+          </div>
+
+          <!-- GUESTBOOK (KNIHA VZKAZŮ) -->
+          <div class="guestbook-card">
+            <h2>Kniha vzkazů 💌</h2>
+            <p>Zanechte milé slovo pro autoři a ostatní návštěvníky pohádkového světa:</p>
+
+            <form id="guestbook-form" style="margin-bottom: 1.5rem;">
+              <div class="form-group">
+                <input type="text" id="gb-author" class="form-input" placeholder="Vaše jméno" required style="margin-bottom: 0.8rem;">
+                <textarea id="gb-text" class="form-textarea" rows="2" placeholder="Zanechejte vzkaz..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-secondary" id="btn-submit-gb" style="width: 100%;">
+                Přidat do knihy vzkazů
+              </button>
+            </form>
+
+            <div class="comments-list" id="comments-list">
+              <!-- Rendered comments -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Bavlaková</h3>
+          <p>
+            Poctivá ruční tvorba jednokusových háčkovaných bytostí. Všechna práva vyrazena.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+            <a href="#" class="social-icon" aria-label="Pinterest">📌</a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Rychlé odkazy</h4>
+          <ul class="footer-nav">
+            <li><a href="index.html#svety">Kouzelné světy</a></li>
+            <li><a href="index.html#filozofie">Filozofie 1 z 1</a></li>
+            <li><a href="index.html#panacci">Přehled panáčků</a></li>
+            <li><a href="#klubicko">Koupit klubíčko</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Pohádkové heslo</h4>
+          <p style="font-family: var(--font-heading); font-style: italic; font-size: 1.15rem; color: #D3C7C6;">
+            „Nitka za nitkou vzniká příběh, který nikdo druhý nevlastní.“
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="current-year">2026</span> Bavlaková. Ručně vyrobeno s láskou a trpělivostí.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: DETAILED STORY VIEW -->
+  <div class="modal-overlay" id="story-modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close-story">✕</button>
+      <div id="modal-story-body">
+        <!-- Injected story details -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: QR PAYMENT DONATION -->
+  <div class="modal-overlay" id="qr-modal" aria-hidden="true">
+    <div class="modal-content text-center">
+      <button class="modal-close" id="modal-close-qr">✕</button>
+      <h3 class="font-heading">Děkuji za podporu! 🧶</h3>
+      <p id="qr-modal-desc">Podpora tvorby částkou <strong id="qr-amount-text">50 Kč</strong></p>
+      
+      <div class="qr-container">
+        <div class="qr-placeholder">
+          <!-- Simple simulated QR SVG -->
+          <svg width="150" height="150" viewBox="0 0 100 100" fill="#4A3E3D">
+            <rect width="100" height="100" fill="#FFFFFF"/>
+            <path d="M10 10h30v30h-30zM15 15v20h20v-20zM22 22h6v6h-6zM60 10h30v30h-30zM65 15v20h20v-20zM72 22h6v6h-6zM10 60h30v30h-30zM15 65v20h20v-20zM22 72h6v6h-6zM50 50h10v10h-10zM70 50h20v10h-20zM50 70h15v20h-15zM75 75h15v15h-15z"/>
+          </svg>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Naskenujte ve své bankovní aplikaci</p>
+      </div>
+
+      <button class="btn btn-primary" id="btn-qr-confirm">
+        Mám zaplaceno, děkuji! ❤️
+      </button>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
